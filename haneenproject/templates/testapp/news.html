@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr"l>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Haneen News Portal</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/demo.css'%}">
+</head>
+<body>
+	<h1>{{head_msg}}</h1>
+	<ul>
+		<li>{{sub_msg1}}</li>
+		<li>{{sub_msg2}}</li>
+		<li>{{sub_msg3}}</li>
+	</ul>
+	{% if type == 'movies' %}
+	<img src="{% static 'images/1.jpg' %}">
+	<img src="{% static 'images/2.jpg' %}">
+	<img src="{% static 'images/3.jpg' %}">
+	{% elif type == 'sports' %}
+	<img src="{% static 'images/4.jpg' %}">
+	<img src="{% static 'images/5.jpg' %}">
+	<img src="{% static 'images/6.jpg' %}">
+	{% elif type == 'politics' %}
+	<img src="{% static 'images/7.jpg' %}">
+	<img src="{% static 'images/8.jpg' %}">
+	<img src="{% static 'images/9.png' %}">
+	{% endif %}
+</body>
+</html>
